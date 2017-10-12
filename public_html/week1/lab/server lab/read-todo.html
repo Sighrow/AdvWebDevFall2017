@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Read-Todo</h1>
+        <p></p>
+        <script type="text/javascript">
+
+            let myRequest = 'http://localhost:3000/todo'
+
+            fetch(myRequest)
+                    .then(function (response) {
+                        return response.json()
+                    })
+                    .then(function (json) {
+                        
+                        let p = document.querySelector('p')
+                        let str = "";
+                        for (let index in json) {
+                        str += `<p>id: ${json[index].id} <br>title: ${json[index].title} </p>`
+                        };
+                        
+                        p.innerHTML += str
+                    })
+        </script>
+    </body>
+</html>
