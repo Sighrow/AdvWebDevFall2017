@@ -11,7 +11,7 @@ router.get('/form', function(req, res, next) {
 });
 
 router.post('/form', function(req, res, next) {
-  res.render('form', {title: req.body.email});
+  res.render('form', {para: req.body.email});
 });
 
 module.exports = router;
