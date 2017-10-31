@@ -6,3 +6,67 @@ body {
 a {
   color: #00B7FF;
 }
+
+.nav{
+    width: 100%;
+    height: 25px;
+    background-color: #000;
+    color: #fff;
+    border-bottom: 3px solid black;
+    border-top: 10px solid black;
+}
+
+.navbtn{
+    width: 10%;
+    height: 25px;
+    color: #fff;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    text-height: auto;
+}
+
+.navbtn:hover{
+    border-bottom: 3px solid orange;
+    color: orange;
+}
+
+.still, .rotate, .shrink {
+ color: red;
+ display: inline-block;
+ font-size: 60px;
+ padding: 1rem;
+ text-shadow: 1px 1px 2px black; 
+}
+
+.rotate {
+ animation: rotate 1s infinite ease;
+}
+
+.shrink {
+ animation: shrink 1s infinite ease;
+}
+
+@keyframes rotate { 
+ 0% { 
+ transform: rotateZ(-30deg);
+ }
+ 50% {
+ transform: rotateZ(30deg);
+ }
+ 100% {
+ transform: rotateZ(0);
+ }
+}
+
+@keyframes shrink { 
+ 0% { 
+ transform: scale(0.8);
+ }
+ 50% {
+ transform: scale(1.2);
+ }
+ 100% {
+ transform: scale(1);
+ }
+}
