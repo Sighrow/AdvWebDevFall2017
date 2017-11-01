@@ -11,29 +11,3 @@ block content
   p= msg
   table
     +newRow(size)
-
-mixin loadDDL()
-    -var dims = [3,4,5,10,20];
-    each d in dims
-        option(value=d)= d
-
-mixin drawRow(size)
-    -var size = size;
-    -var i = 0;
-    -var j = 0;
-    tr
-        while i < size
-            -var color = ((1<<24)*Math.random()|0).toString(16);
-            -var c = "#"+color;
-            td(style='background-color:'+c+'; color:#000;')= c
-                br
-                span(style='color:#fff; text-shadow: 1px 1px 1px #000;')= c
-            -i++;
-
-mixin newRow(size)
-    -var x = 0;
-    tbody
-        while x < size
-            +drawRow(size)
-            -x++;	
-    

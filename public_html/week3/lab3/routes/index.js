@@ -10,7 +10,7 @@ router.post('/', function(req, res, next) {
   res.render('index', { 
       title: 'Generate Color Grid', 
       size: req.body.size, 
-      msg: 'Viewing ' + req.body.size + 'x' + req.body.size + ' grid.' });
+      msg: 'Viewing ' + req.body.size + 'x' + req.body.size + ' grid:' });
 });
 
 module.exports = router;
