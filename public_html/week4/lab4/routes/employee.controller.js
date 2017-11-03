@@ -17,7 +17,7 @@ module.exports.home = function(req, res){
           salary: req.body.salary
         })
         .then(function(){
-            msg = 'Review was Saved';
+            msg = 'New employee was added.';
             return;
         })
         .catch(function(err){            
@@ -60,11 +60,11 @@ module.exports.delete = function(req, res){
       
         Employee.remove({ _id: id })
         .then(function(){            
-            removed = `${id} has been removed`;
+            removed = `Employee (ID:"${id}") has been removed.`;
             return;
         })
         .catch(function (err) {            
-            removed = `${id} has not been removed`;
+            removed = `Employee (ID:"${id}") has not been removed.`;
             return err; 
         })
         .then( (err) => {
