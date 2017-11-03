@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    h1=title
+    hr(style="color: orange; border-style: solid;")
+    br
+    if results.length
+        table(class="tableStyle" border="1")
+            thead   
+                tr
+                    th First Name
+                    th Last Name
+                    th Department
+                    th Job Title
+                    th Start Date
+                    th Salary
+                    th
+                    th
+                    
+            tbody
+              each stuff in results
+                tr
+                    td 
+                        =stuff.firstName
+                    td 
+                        =stuff.lastName
+                    td 
+                        =stuff.department
+                    td 
+                        =stuff.jobTitle
+                    td 
+                        =stuff.startDate.toDateString()
+                    td 
+                        = "$"+stuff.salary.toFixed(2)
+                    td(style="text-align: center;")
+                        a(href="../update/"+stuff._id) Update
+                    td(style="text-align: center;")
+                        a(href="../delete/"+stuff._id) Delete
+    else
+        p No employees found.

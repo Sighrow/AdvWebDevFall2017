@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    h1= title
+    hr(style="color: orange; border-style: solid;")
+    h2=message
+    form(action="/", method="post", role="form")     
+        h3 Name
+        input#firstName(type="text" placeholder="First Name" name="firstName")
+        input#lastName(type="text" placeholder="Last Name" name="lastName")
+        h3 Department
+        select#department(name="department")
+            option(value="Accounting") Accounting
+            option(value="Customer Service") Customer Service
+            option(value="Human Resources") Human Resources
+            option(value="Information Technology") Information Technology
+            option(value="Marketing") Marketing
+        input#jobTitle(type="text" placeholder="Job Title" name="jobTitle")
+        h3 Salary
+        input#salary(type="number" placeholder="Salary" name="salary")
+        h3 Start Date
+        input#startDate(type="date" name="startDate")
+        h3 
+        input(type="submit" value="Add Employee") 
