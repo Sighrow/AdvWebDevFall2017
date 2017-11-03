@@ -20,6 +20,7 @@ table.tableStyle th {
 	padding: 8px;
 	border-style: solid;
 	border-color: #746553;
+        font-size: 12px;
 }
 table.tableStyle td {
 	background:#ffe7bc;
@@ -27,14 +28,36 @@ table.tableStyle td {
 	padding: 8px;
 	border-style: solid;
 	border-color: #746553;
+        font-size: 12px;
 }
-
+table.tableStyle a{
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 5px;
+        margin: 4px;
+}
+table.tableStyle a:hover{
+        text-decoration: none;
+        color: white;
+        background-color: orange;
+        border: 2px solid orange;
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 5px;
+        margin: 4px;
+        transition: border .3s, background-color .3s;
+}
 a {
   color: #00B7FF;
 }
 
 .dim:hover{
     opacity: .7;
+    transition: opacity .3s;
 }
 .nav{
     width: 100%;
@@ -43,6 +66,7 @@ a {
     color: #fff;
     border-bottom: 3px solid black;
     border-top: 10px solid black;
+    font-size: 12px;
 }
 
 .navbtn{
