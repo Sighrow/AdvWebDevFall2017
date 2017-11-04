@@ -9,7 +9,7 @@ var employeeSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Last name is required.']
     },
-    deparment: {
+    department: {
         type: String
     },
     jobTitle: {
