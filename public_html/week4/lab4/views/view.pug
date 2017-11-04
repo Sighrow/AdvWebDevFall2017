@@ -1,7 +1,9 @@
 extends layout
 
 block content
-    h1=title
+    div
+        img(src="../load.gif" id="loadgif" style="float: right; width: 45px; height: 45px; margin-top: -6px; display: none;")
+        h1= title
     hr(style="color: orange; border-style: solid;")
     br
     if results.length
@@ -33,8 +35,8 @@ block content
                     td 
                         = "$"+stuff.salary.toFixed(2)
                     td(style="text-align: center;")
-                        a(href="../update/"+stuff._id) Update
+                        a(href="../update/"+stuff._id onclick="document.getElementById('loadgif').style.display='inline'") Update
                     td(style="text-align: center;")
-                        a(href="../delete/"+stuff._id) Delete
+                        a(href="../delete/"+stuff._id onclick="document.getElementById('loadgif').style.display='inline'") Delete
     else
         p No employees found.

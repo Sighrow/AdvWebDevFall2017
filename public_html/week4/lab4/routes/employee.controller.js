@@ -89,18 +89,21 @@ module.exports.update = function(req, res){
             .then(function(employeeData) {
                 // figure out why the data is not saving. 
                 debug(req.body);
-                employeeData.author = req.body.author;
-                employeeData.rating = req.body.rating;
-                employeeData.reviewText = req.body.reviewText;
+                employeeData.firstName = req.body.firstName;
+                employeeData.lastName = req.body.lastName;
+                employeeData.department = req.body.department;
+                employeeData.startDate = req.body.startDate;
+                employeeData.jobTitle = req.body.jobTitle;
+                employeeData.salary = req.body.salary;
 
                 return employeeData.save();
                                 
             })
             .then(function(){
-                msg = 'data has been updated';
+                msg = 'Employee has been updated';
             })
             .catch(function(err){
-                msg = 'data has NOT been updated';
+                msg = 'Employee has NOT been updated';
                 debug(err);
             });
         
@@ -111,14 +114,14 @@ module.exports.update = function(req, res){
     .exec()
     .then(function(results){    
         res.render('update', { 
-            title: 'Update Results',
+            title: 'Update Employee',
             message: msg,
             results : results
         });
     })
     .catch(function(){
         res.render('notfound', { 
-            message: 'Sorry ID not found'
+            message: 'Employee ID not found.'
         });
     });
 };
