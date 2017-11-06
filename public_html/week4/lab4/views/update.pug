@@ -6,7 +6,7 @@ block content
         h1= title
     hr(style="color: orange; border-style: solid;")
     h2=message
-    form(action="/update", method="post", role="form")     
+    form(action="/update/"+results._id, method="post", role="form")     
         h3 Name
         input#firstName(type="text" placeholder="First Name" name="firstName" value=results.firstName)
         input#lastName(type="text" placeholder="Last Name" name="lastName" value=results.lastName)
@@ -19,7 +19,7 @@ block content
             option(selected=results.department == "Marketing") Marketing
         input#jobTitle(type="text" placeholder="Job Title" name="jobTitle" value=results.jobTitle)
         h3 Salary
-        input#salary(type="number" placeholder="Salary" name="salary" value=results.salary)
+        input#salary(type="number" placeholder="Salary" name="salary" value=results.salary step="1000")
         h3 Start Date
         input#startDate(type="date" name="startDate" placeholder="MM/DD/YYYY" value=results.startDate)
         h3 

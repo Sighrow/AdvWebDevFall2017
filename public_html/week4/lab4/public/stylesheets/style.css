@@ -4,6 +4,22 @@ body {
     background-color: #f1f1f1;
 }
 
+table.tableStyle tr:nth-of-type(odd) {
+    background:#ffe7bc;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #746553;
+    font-size: 12px;
+    }
+table.tableStyle tr:nth-of-type(even) {
+    background:#e9d0a1;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #675a4a;
+    font-size: 12px;
+    }
 table.tableStyle {
     width: 100%;
     height: auto;
@@ -22,8 +38,7 @@ table.tableStyle th {
     border-color: #746553;
     font-size: 12px;
 }
-table.tableStyle td {
-    background:#ffe7bc;
+table.tableStyle td {   
     border-width: 1px;
     padding: 8px;
     border-style: solid;
