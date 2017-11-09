@@ -2,10 +2,14 @@ extends layout
 
 block content
     div
-        img(src="../load.gif" id="loadgif" style="float: right; width: 45px; height: 45px; margin-top: -6px; display: none;")
+        img(src="../load.gif" id="loadgif")
         h1= title
-    hr(style="color: orange; border-style: solid;")
+    hr
     h2=message
+    div(style="margin-left: 25px;")
+        ul
+        each e in error
+            li= e.msg
     form(action="/", method="post", role="form")     
         h3 Name
         input#firstName(type="text" placeholder="First Name" name="firstName")
@@ -23,4 +27,4 @@ block content
         h3 Start Date
         input#startDate(type="date" name="startDate" placeholder="MM/DD/YYYY")
         h3 
-        input(type="submit" value="Add Employee" onclick="document.getElementById('loadgif').style.display='inline'") 
+        input(type="submit" value="Add Employee" onclick="document.getElementById('loadgif').style.display='inline'")

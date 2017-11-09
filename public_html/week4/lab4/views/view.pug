@@ -2,9 +2,9 @@ extends layout
 
 block content
     div
-        img(src="../load.gif" id="loadgif" style="float: right; width: 45px; height: 45px; margin-top: -6px; display: none;")
+        img(src="../load.gif" id="loadgif")
         h1= title
-    hr(style="color: orange; border-style: solid;")
+    hr
     br
     if results.length
         table(class="tableStyle" border="1")

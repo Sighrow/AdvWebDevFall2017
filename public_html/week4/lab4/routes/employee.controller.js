@@ -1,10 +1,18 @@
-
 var Employee = require('./employee.model');
 var debug = require('debug')('lab4:employee');
 
 module.exports.home = function(req, res){
-        
-    if (req.method === 'POST') {
+
+req.checkBody('firstName', 'First name is required').notEmpty();
+req.checkBody('lastName', 'Last name is required').notEmpty();
+req.checkBody('department', 'Department is required').notEmpty();
+req.checkBody('startDate', 'Start date is required').notEmpty();
+req.checkBody('jobTitle', 'Job title is required').notEmpty();
+req.checkBody('salary', 'Salary is required').notEmpty();
+		
+var errors = "";
+    
+    if (req.method === 'POST' && !errors) {
         
        var msg = '';
         
@@ -18,6 +26,7 @@ module.exports.home = function(req, res){
         })
         .then(function(){
             msg = 'New employee was added.';
+            errors = '';
             return;
         })
         .catch(function(err){            
@@ -27,14 +36,15 @@ module.exports.home = function(req, res){
             res.render('index', { 
                 title: 'Enter Information',
                 message : msg,
-                error: err
+                error: req.validationErrors()
              });
         });   
               
     } else {
         res.render('index', { 
             title: 'Enter Information',
-            message : ''
+            message : '',
+            error: ''
         }); 
     }
      

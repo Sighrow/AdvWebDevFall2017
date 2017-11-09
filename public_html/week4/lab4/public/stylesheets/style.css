@@ -3,7 +3,22 @@ body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background-color: #f1f1f1;
 }
-
+#logo{
+    float: left;
+    margin-top: -12px;
+    margin-right: 5px;
+}
+#loadgif{
+    float: right;
+    width: 45px;
+    height: 45px;
+    margin-top: -6px;
+    display: none;
+}
+hr{
+    color: orange;
+    border-style: solid;
+}
 table.tableStyle tr:nth-of-type(odd) {
     background:#ffe7bc;
     border-width: 1px;
