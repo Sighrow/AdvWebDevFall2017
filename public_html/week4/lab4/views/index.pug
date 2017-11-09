@@ -6,10 +6,9 @@ block content
         h1= title
     hr
     h2=message
-    div(style="margin-left: 25px;")
-        ul
-        each e in error
-            li= e.msg
+    ul
+    each e in error
+        li(class="errorlist")= e.msg
     form(action="/", method="post", role="form")     
         h3 Name
         input#firstName(type="text" placeholder="First Name" name="firstName")

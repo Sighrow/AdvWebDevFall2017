@@ -110,10 +110,10 @@ module.exports.update = function(req, res){
                                 
             })
             .then(function(){
-                msg = 'Employee has been updated';
+                msg = 'Employee has been updated.';
             })
             .catch(function(err){
-                msg = 'Employee has NOT been updated';
+                msg = 'Employee has NOT been updated.';
                 debug(err);
             });
         

@@ -15,6 +15,11 @@ body {
     margin-top: -6px;
     display: none;
 }
+.errorlist{
+    color: orangered;
+    font-size: 11px;
+    margin-left: 10px;
+}
 hr{
     color: orange;
     border-style: solid;
